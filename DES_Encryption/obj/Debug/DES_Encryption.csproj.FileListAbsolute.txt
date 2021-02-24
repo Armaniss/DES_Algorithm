@@ -1,0 +1,10 @@
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\bin\Debug\DES_Encryption.exe.config
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\bin\Debug\DES_Encryption.exe
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\bin\Debug\DES_Encryption.pdb
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\obj\Debug\DES_Encryption.csprojAssemblyReference.cache
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\obj\Debug\DES_Encryption.Form1.resources
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\obj\Debug\DES_Encryption.Properties.Resources.resources
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\obj\Debug\DES_Encryption.csproj.GenerateResource.cache
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\obj\Debug\DES_Encryption.csproj.CoreCompileInputs.cache
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\obj\Debug\DES_Encryption.exe
+C:\Users\Arme6\source\repos\DES_Encryption\DES_Encryption\obj\Debug\DES_Encryption.pdb
