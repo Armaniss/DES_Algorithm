@@ -11,7 +11,7 @@ namespace DES_Encryption
     class DES
     {
 
-        public string EncryptData(string strData, string strKey)
+        public string EncryptData(string strData, string strKey, bool mode)
         {
             byte[] key = { }; //Encryption Key   64bits
             byte[] IV = { 10, 20, 30, 40, 50, 60, 70, 80 };
@@ -21,6 +21,8 @@ namespace DES_Encryption
             {
                 key = Encoding.UTF8.GetBytes(strKey);                
                 DESCryptoServiceProvider ObjDES = new DESCryptoServiceProvider();
+                if (mode == false) { ObjDES.Mode = CipherMode.ECB; };                    
+                if (mode == true) { ObjDES.Mode = CipherMode.CBC; };               
                 inputByteArray = Encoding.UTF8.GetBytes(strData);
                 MemoryStream Objmst = new MemoryStream();
                 CryptoStream Objcs = new CryptoStream(Objmst, ObjDES.CreateEncryptor(key, IV), CryptoStreamMode.Write);
@@ -35,7 +37,7 @@ namespace DES_Encryption
             }
         }
 
-        public string DecryptData(string strData, string strKey)
+        public string DecryptData(string strData, string strKey, bool mode)
         {
             byte[] key = { };// Key   
             byte[] IV = { 10, 20, 30, 40, 50, 60, 70, 80 };
@@ -45,6 +47,8 @@ namespace DES_Encryption
             {
                 key = Encoding.UTF8.GetBytes(strKey);
                 DESCryptoServiceProvider ObjDES = new DESCryptoServiceProvider();
+                if (mode == false) { ObjDES.Mode = CipherMode.ECB; };
+                if (mode == true) { ObjDES.Mode = CipherMode.CBC; };
                 inputByteArray = Convert.FromBase64String(strData);
 
                 MemoryStream Objmst = new MemoryStream();

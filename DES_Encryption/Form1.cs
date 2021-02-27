@@ -23,7 +23,7 @@ namespace DES_Encryption
             try
             {
                 DES des = new DES();
-                tBoxEncData.Text = des.EncryptData(textBox1.Text, tBoxKeyEncrypt.Text);
+                tBoxEncData.Text = des.EncryptData(textBox1.Text, tBoxKeyEncrypt.Text, cbCBCMode.Checked);
             }
             catch (System.Exception ex)
             {
@@ -36,12 +36,22 @@ namespace DES_Encryption
             try 
             {
                 DES des = new DES();
-                tBoxDcpData.Text = des.DecryptData(textBox2.Text, tBoxKeyDecrypt.Text);
+                tBoxDcpData.Text = des.DecryptData(textBox2.Text, tBoxKeyDecrypt.Text,cbCBCMode.Checked);
             }
             catch (System.Exception ex)
             {
-                throw ex;
+                MessageBox.Show("Parinktas neteisingas šifravimo režimas");
             }
+        }
+
+        private void cbCBCMode_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbCBCMode.Checked) { cbECBMode.Checked = false; };
+        }
+
+        private void cbECBMode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbECBMode.Checked) { cbCBCMode.Checked = false; };
         }
     }
 }

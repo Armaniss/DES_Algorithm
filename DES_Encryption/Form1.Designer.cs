@@ -40,6 +40,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tBoxKeyEncrypt = new System.Windows.Forms.TextBox();
             this.tBoxKeyDecrypt = new System.Windows.Forms.TextBox();
+            this.cbCBCMode = new System.Windows.Forms.CheckBox();
+            this.cbECBMode = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -72,7 +74,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(82, 122);
+            this.button1.Location = new System.Drawing.Point(82, 163);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -142,11 +144,35 @@
             this.tBoxKeyDecrypt.Size = new System.Drawing.Size(100, 20);
             this.tBoxKeyDecrypt.TabIndex = 11;
             // 
+            // cbCBCMode
+            // 
+            this.cbCBCMode.AutoSize = true;
+            this.cbCBCMode.Location = new System.Drawing.Point(82, 122);
+            this.cbCBCMode.Name = "cbCBCMode";
+            this.cbCBCMode.Size = new System.Drawing.Size(77, 17);
+            this.cbCBCMode.TabIndex = 12;
+            this.cbCBCMode.Text = "CBC Mode";
+            this.cbCBCMode.UseVisualStyleBackColor = true;
+            this.cbCBCMode.CheckedChanged += new System.EventHandler(this.cbCBCMode_CheckedChanged);
+            // 
+            // cbECBMode
+            // 
+            this.cbECBMode.AutoSize = true;
+            this.cbECBMode.Location = new System.Drawing.Point(82, 140);
+            this.cbECBMode.Name = "cbECBMode";
+            this.cbECBMode.Size = new System.Drawing.Size(77, 17);
+            this.cbECBMode.TabIndex = 13;
+            this.cbECBMode.Text = "ECB Mode";
+            this.cbECBMode.UseVisualStyleBackColor = true;
+            this.cbECBMode.CheckedChanged += new System.EventHandler(this.cbECBMode_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbECBMode);
+            this.Controls.Add(this.cbCBCMode);
             this.Controls.Add(this.tBoxKeyDecrypt);
             this.Controls.Add(this.tBoxKeyEncrypt);
             this.Controls.Add(this.label4);
@@ -180,6 +206,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tBoxKeyEncrypt;
         private System.Windows.Forms.TextBox tBoxKeyDecrypt;
+        private System.Windows.Forms.CheckBox cbCBCMode;
+        private System.Windows.Forms.CheckBox cbECBMode;
     }
 }
 
